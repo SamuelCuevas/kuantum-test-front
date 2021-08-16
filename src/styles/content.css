@@ -1,0 +1,23 @@
+.content {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 240px);
+    left: 240px; 
+    margin-top: 14px;
+}
+/* Ir editando propiedad LEFT para los @media */
+.del {
+    color:#ef1313;
+    font-size: 25px;
+}
+
+.title_form {
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* .alerts_config {
+    text-align: center;
+    margin-top: 5px;
+    
+} */
