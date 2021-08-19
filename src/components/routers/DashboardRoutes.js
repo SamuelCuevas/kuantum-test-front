@@ -9,7 +9,6 @@ import { Device } from '../device/Device'
 import { DeviceList } from '../device/DeviceList'
 import { Alert } from '../alert/Alert'
 import { AlertList } from '../alert/AlertList'
-import { EditDevice } from '../device/EditDevice';
 
 export const DashboardRoutes = () => {
     return (
@@ -21,7 +20,6 @@ export const DashboardRoutes = () => {
                     <Route exact path="/" component={Home} />
                     <Route exact path="/devices" component={Device} />
                     <Route exact path="/devicelist" component={DeviceList} />
-                    <Route exact path="/device/:uuid" component={EditDevice} />
                     <Route exact path="/alerts" component={Alert} />
                     <Route exact path="/alertlist" component={AlertList} />
                     {/* <Route exact path="/hero/:heroId" component={HeroScreen} />

@@ -54,7 +54,7 @@ export const Navbar = () => {
                         to="/alerts"
                     >
                         <i className='bx bxs-bell'></i>
-                        Alerts
+                        Alerts by Device
                     </NavLink>
                 </li>
                 <li>

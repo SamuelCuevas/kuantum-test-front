@@ -1,28 +1,62 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { fetchAlert } from '../../helpers/fetch';
+import moment from 'moment';
+import Swal from "sweetalert2";
+moment.locale('es');
+
 
 export const AlertList = () => {
+
+    const [alerts, setAlerts] = useState([]);
+
+    const getAlerts =async() => {
+        const resp = await fetchAlert("");
+        const body = await resp.json();
+        if(body.ok) {
+            setAlerts(body.alerts);
+        }
+    }
+
+    useEffect(() => {
+        getAlerts();
+    }, []);
+
+    const handleDelete = async(e) => {
+        e.preventDefault();
+        const resp = await fetchAlert(e.target.value, {}, 'DELETE');
+        const body = await resp.json();
+        if(body.ok) {
+            Swal.fire('Success', body.msg, 'success');
+            getAlerts();
+        }
+    }
+
     return (
         <>
             <div className="container">
                 <table className="table">
-                            <thead>
-                                <tr>
-                                <th scope="col">ID</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Created</th>
-                                <th scope="col">Action</th>
+                    <thead>
+                            <tr>
+                            <th scope="col">UUID</th>
+                            <th scope="col">Device UUID</th>
+                            <th scope="col">Registered Value</th>
+                            <th scope="col">Created</th>
+                            <th scope="col">Action</th>
+                            </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            alerts.map((al, i) => (
+                                <tr key={ i }>
+                                    <td>{ al.uuid }</td>
+                                    <td>{ al.deviceUuid }</td>
+                                    <td>{ al.registered_value }</td>
+                                    <td>{ moment(al.createdAt).format('hh:mm:ss DD/MM/YY') }</td>
+                                    <th><button className="btn btn-danger" name="btnDelete" id={ al.uuid } value={ al.uuid } onClick={ handleDelete }>X</button></th>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <th><i className='bx bxs-x-circle del'></i></th>
-                                </tr>
-                            </tbody>
+                            ))
+                        }
+                    </tbody>
                 </table>
             </div>
         </>

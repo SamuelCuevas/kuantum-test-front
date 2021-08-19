@@ -5,7 +5,7 @@ export const Home = () => {
         <>
             <div className="container">
                 <div className="row">
-                            <h1>Simulacion de Alarmas</h1>
+                            <h1>Simulated Alerts</h1>
                         <div className="col-md-6">
                         <form>
                             <div className="mb-3">
