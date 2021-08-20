@@ -68,6 +68,7 @@ export const Alert = () => {
                         <th scope="col">UUID</th>
                         <th scope="col">Device UUID</th>
                         <th scope="col">Registered Value</th>
+                        <th scope="col">Alert Type</th>
                         <th scope="col">Created</th>
                         <th scope="col">Action</th>
                         </tr>

@@ -13,6 +13,7 @@ export const AlertFilter = ({value, alerts, handleDelete}) => {
                             <td>{ al.uuid }</td>
                             <td>{ al.deviceUuid }</td>
                             <td>{ al.registered_value }</td>
+                            <td>{ al.alert_data.alert_type }</td>
                             <td>{ moment(al.createdAt).format('hh:mm:ss DD/MM/YY') }</td>
                             <th><button className="btn btn-danger" name="btnDelete" id={ al.uuid } value={ al.uuid } onClick={ handleDelete }>X</button></th>
                         </tr>

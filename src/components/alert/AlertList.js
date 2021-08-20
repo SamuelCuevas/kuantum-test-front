@@ -40,6 +40,7 @@ export const AlertList = () => {
                             <th scope="col">UUID</th>
                             <th scope="col">Device UUID</th>
                             <th scope="col">Registered Value</th>
+                            <th scope="col">Alert Type</th>
                             <th scope="col">Created</th>
                             <th scope="col">Action</th>
                             </tr>
@@ -51,6 +52,7 @@ export const AlertList = () => {
                                     <td>{ al.uuid }</td>
                                     <td>{ al.deviceUuid }</td>
                                     <td>{ al.registered_value }</td>
+                                    <td>{ al.alert_data.alert_type }</td>
                                     <td>{ moment(al.createdAt).format('hh:mm:ss DD/MM/YY') }</td>
                                     <th><button className="btn btn-danger" name="btnDelete" id={ al.uuid } value={ al.uuid } onClick={ handleDelete }>X</button></th>
                                 </tr>
