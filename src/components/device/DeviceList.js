@@ -114,8 +114,6 @@ export const DeviceList = () => {
         setIsOpen(false);
     }
 
-    
-
     return (
         <>
             <div className="container">

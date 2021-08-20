@@ -20,7 +20,6 @@ const fetchDevice = ( endpoint, data, method = 'GET' ) => {
 
 }
 
-
 const fetchAlert = ( endpoint, data, method = 'GET' ) => {
 
     const url = `${ baseUrlAlert }/${ endpoint }`;
@@ -38,7 +37,6 @@ const fetchAlert = ( endpoint, data, method = 'GET' ) => {
     }
 
 }
-
 
 export {
     fetchDevice,

@@ -5,7 +5,7 @@
     left: 240px; 
     margin-top: 14px;
 }
-/* Ir editando propiedad LEFT para los @media */
+
 .del {
     color:#ef1313;
     font-size: 25px;
@@ -17,7 +17,6 @@
     margin-top: 5px;
 }
 
-/* Modal */
 .ReactModalPortal > div{
     opacity: 0;
 }
@@ -58,12 +57,7 @@
     padding: 10px;
 }
 
-/* .bti {
-    margin-top: 4px;
-    font-size: 28px;
-} */
-/* .alerts_config {
+.title {
     text-align: center;
-    margin-top: 5px;
-    
-} */
+    margin-bottom: 10px;
+}

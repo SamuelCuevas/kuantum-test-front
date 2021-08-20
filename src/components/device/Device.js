@@ -76,7 +76,7 @@ export const Device = () => {
                                             <input type="number" className="form-control" placeholder="Max" step="0.01" id="max" name="max"  onChange= { handleInputChange } required />
                                         </div>
                                 </div>
-                            <button type="submit" className="btn btn-primary form-control" onClick={ handleSubmit }>Submit</button>
+                            <button type="submit" className="btn btn-primary form-control" onClick={ handleSubmit }>Save</button>
                         </form>
                 </div>
             </div>
